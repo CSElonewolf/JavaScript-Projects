@@ -1,5 +1,9 @@
 # JavaScript-Projects
-![1](https://res.cloudinary.com/practicaldev/image/fetch/s--rDIPH420--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/enqxo9y62lbqr9amdli0.png)
+### All the projects are coded using vanilla javascript(No Framework or Library)
+![2](https://media.wired.com/photos/59322df1a312645844993529/master/pass/testing.gif)
+
+### This is a LIVE repository! Means frequently updated and maintained
+![1](https://i.ya-webdesign.com/images/transparent-live-animated-gif-12.gif) 
 
 ## Vanilla
 
