@@ -2,7 +2,7 @@
 ### All the projects are coded using vanilla javascript(No Framework or Library)
 ![2](https://media.wired.com/photos/59322df1a312645844993529/master/pass/testing.gif)
 
-### This is a LIVE repository! Means frequently updated and maintained
+### This is a LIVE repository! Means frequently updated and maintained:laughing: 
 ![1](https://i.ya-webdesign.com/images/transparent-live-animated-gif-12.gif) 
 
 ## Vanilla
