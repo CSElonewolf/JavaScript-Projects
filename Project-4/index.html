@@ -23,11 +23,48 @@
   </nav>
 
   <div class="container my-3">
-    <h3>Top News <span class="badge badge-secondary">by AJAX API CALL</span></h3>
+    <h3>Top News <span><h2>by AJAX API CALL</h2></span></h3>
+    <hr>
+    <h3><span class="badge badge-secondary">Select Type of News</span></h3>
+    <form id="newstype" class="ml-5">
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="world" name="example1">
+        <label class="custom-control-label" for="world">world</label>
+      </div> <br>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="nation" name="example1">
+        <label class="custom-control-label" for="nation">nation</label>
+      </div> <br>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="business" name="example1">
+        <label class="custom-control-label" for="business">business</label>
+      </div> <br>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="technology" name="example1">
+        <label class="custom-control-label" for="technology">technology</label>
+      </div> <br>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="entertainment" name="example1">
+        <label class="custom-control-label" for="entertainment">entertainment</label>
+      </div> <br>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="sports" name="example1">
+        <label class="custom-control-label" for="sports">sports</label>
+      </div> <br>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="science" name="example1">
+        <label class="custom-control-label" for="science">science</label>
+      </div> <br>
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="health" name="example1">
+        <label class="custom-control-label" for="health">health</label>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">search news</button>
+    </form>
     <hr>
     <div class="accordion" id="newsAccordion"></div>
   </div>
-  <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
