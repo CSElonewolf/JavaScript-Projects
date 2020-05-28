@@ -44,6 +44,8 @@ let words = ["thirteen", "Thursday", "princess", "assonant", "thousand", "fourte
 // init function is called when the window loads;
 function init() {
     seconds.innerHTML = time;
+    //show the high score as soon nas it loads
+    showhighscore();
     // call showword function
     showword(words);
     //call startmatch function when then user start typing
@@ -113,3 +115,9 @@ function checkstatus() {
     }
 }
 
+//function to load the highscore
+function showhighscore(){
+    if (localStorage.getItem('hscore') != null) {
+        highscore.innerHTML = localStorage.getItem('hscore');
+    } 
+}
