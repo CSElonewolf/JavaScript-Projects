@@ -5,7 +5,15 @@
 ### This is a LIVE repository! Means frequently updated and maintained:laughing: 
 ![1](https://i.ya-webdesign.com/images/transparent-live-animated-gif-12.gif) 
 
-## Vanilla
+## Why so Emojis
+
+| Emoji                             | Description                                                             |
+| ------------------------------------------ | ------------------------------------------------------------------------ |
+| :heart_eyes_cat:                                  | Favourite Project|
+|   💡                      | Good Project      |
+| 📕                              | Working on it |
+
+## Vanilla Js Project List 
 
 | Project Title                              | Project Link                                                             |
 | ------------------------------------------ | ------------------------------------------------------------------------ |
@@ -13,4 +21,5 @@
 | Project-2 📕                         | [View Demo](https://cselonewolf.github.io/JavaScript-Projects/Project-2/)       |
 | Project-3 📕                              | [View Demo](https://cselonewolf.github.io/JavaScript-Projects/Project-3/)            |
 | Project-4 💡                                 | [View Demo](https://cselonewolf.github.io/JavaScript-Projects/Project-4/)             |
-| Project-5 💡                                 | [View Demo](https://cselonewolf.github.io/JavaScript-Projects/Project-5/)             |
+| Project-5 :heart_eyes_cat:                                 | [View Demo](https://cselonewolf.github.io/JavaScript-Projects/Project-5/)|
+| Project-6 :heart_eyes_cat:                                 | [View Demo](https://cselonewolf.github.io/JavaScript-Projects/Project-6/)|
