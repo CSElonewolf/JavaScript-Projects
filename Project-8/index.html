@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Youtube Video Downloader</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-image: linear-gradient(to right,#360033,#0b8793);">
+  <div class="card mx-auto mt-5" style="width:400px">
+    <h4 class="card-title mx-auto mt-2" style="font-family: 'Piedra', cursive;"> <img src="youtube.png"
+        style="width:50px;height:50px"> Video Downloader</h4>
+    <hr style="background-color:grey; height:2px ; opacity: 0.7;">
+    <iframe height="250px" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="thumbnail"
+      alt="Video Thumbnail" SameSite="None"></iframe>
+    <div class="card-body">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Youtube Link" id="link">
+        <div class="input-group-append">
+          <button class="btn btn-primary" id="submit">Download</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="text-center mt-5" style="color:white">Coded by <a class="text-center" href="https://github.com/CSElonewolf"
+      style="text-decoration:none;color:white;font-family: 'Dancing Script', cursive;">CSElonewolf</a></p>
+</body>
+<script src="script.js"></script>
+
+</html>
