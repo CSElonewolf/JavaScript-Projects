@@ -1,4 +1,3 @@
-import reddit from './redditapi'
 
 //grab the ids in the index.html
 let searchform = document.getElementById('search-form')
@@ -10,27 +9,29 @@ searchform.addEventListener('submit', e => {
     const searchterm = searchinput.value;
     limit = limit.value;
     const sortby = document.querySelector('input[name="sortby"]:checked').value;
+
     //call showerror function if the serach term is empty
     if (searchterm === '') {
         showerror("Please enter the search term", "alert-danger")
     }
-    //call  the reddit api
-    reddit.search(searchterm, sortby, limit)
+
+    //call the fetch api
+    fetch(`http://www.reddit.com/search.json?q=${searchterm}&sort=${sortby}&limit=${limit}`)
+        .then(response => response.json())
         .then(data => {
-            console.log(data)
             let html = ''
-            data.forEach(post => {
-                let image = post.preview ? post.preview.images[0].source.url : 'https://lh3.googleusercontent.com/proxy/jXF1EnIcWuxNL8hVHrgmnuAadZyD0MXwVadsva-R8py1xvysIXW2PD7CkmD7JA5e9yC4uGD-KIov2Ezz6vKL_ojdcBz37gxnYglT9RYGQL4xYc-6tS2KHd0Re7d8Kcqk';
+            data.data.children.forEach(post => {
+                let image = post.data.preview ? post.data.preview.images[0].source.url : 'https://lh3.googleusercontent.com/proxy/jXF1EnIcWuxNL8hVHrgmnuAadZyD0MXwVadsva-R8py1xvysIXW2PD7CkmD7JA5e9yC4uGD-KIov2Ezz6vKL_ojdcBz37gxnYglT9RYGQL4xYc-6tS2KHd0Re7d8Kcqk';
                 html += `<div class="card col-lg-3 col-md-4 col-sm-12 mb-2 shadow p-4 mb-4 bg-white">
         <img class="card-img-top" src="${image}" alt="Card image">
         <div class="card-body">
-          <h4 class="card-title" style="font-family: 'Pangolin', cursive;">${post.title}</h4>
-          <p class="card-text" style="font-family: 'Montserrat', sans-serif;">${shorten(post.selftext, 100)}</p>
+          <h4 class="card-title" style="font-family: 'Pangolin', cursive;">${post.data.title}</h4>
+          <p class="card-text" style="font-family: 'Montserrat', sans-serif;">${shorten(post.data.selftext, 100)}</p>
           
-          <span class="badge badge-pill badge-primary">scores:${post.score}</span>
-        <span class="badge badge-pill badge-success">subscribers:${post.subreddit_subscribers}</span>
-        <span class="badge badge-pill badge-secondary">ups:${post.ups}</span><br>
-          <a href="${post.url}" class="btn btn-primary mt-4">Read More</a>
+          <span class="badge badge-pill badge-primary">scores:${post.data.score}</span>
+        <span class="badge badge-pill badge-success">subscribers:${post.data.subreddit_subscribers}</span>
+        <span class="badge badge-pill badge-secondary">ups:${post.data.ups}</span><br>
+          <a href="${post.data.url}" target ="_blank"class="btn btn-primary mt-4">Read More</a>
         </div>
         </div>`
             });
@@ -40,6 +41,7 @@ searchform.addEventListener('submit', e => {
         });
     e.preventDefault();
 });
+
 //display the error message
 function showerror(message, classname) {
 
@@ -60,6 +62,7 @@ function showerror(message, classname) {
 
 }
 
+//truncate the text
 function shorten(text, textlimit) {
     if (text.length == 0) {
         return text;
@@ -67,5 +70,4 @@ function shorten(text, textlimit) {
     else {
         return text.substring(0, text.indexOf(' ', textlimit))
     }
-
 }
