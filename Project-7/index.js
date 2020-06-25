@@ -16,7 +16,7 @@ searchform.addEventListener('submit', e => {
     }
 
     //call the fetch api
-    fetch(`http://www.reddit.com/search.json?q=${searchterm}&sort=${sortby}&limit=${limit}`)
+    fetch(`https://www.reddit.com/search.json?q=${searchterm}&sort=${sortby}&limit=${limit}`)
         .then(response => response.json())
         .then(data => {
             let html = ''
