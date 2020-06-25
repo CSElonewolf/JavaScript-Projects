@@ -23,4 +23,5 @@
 | Project-4 💡                                 | [View Demo](https://cselonewolf.github.io/JavaScript-Projects/Project-4/)             |
 | Project-5 :heart_eyes_cat:                                 | [View Demo](https://cselonewolf.github.io/JavaScript-Projects/Project-5/)|
 | Project-6 :heart_eyes_cat:                                 | [View Demo](https://cselonewolf.github.io/JavaScript-Projects/Project-6/)|
+| Project-7 :heart_eyes_cat:                                 | [View Demo](https://cselonewolf.github.io/JavaScript-Projects/Project-7/)|
 | Project-8 :heart_eyes_cat:                                 | [View Demo](https://cselonewolf.github.io/JavaScript-Projects/Project-8/)|
