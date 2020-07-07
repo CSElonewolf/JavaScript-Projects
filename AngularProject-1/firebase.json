@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/learn-angular",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
