@@ -1,0 +1,29 @@
+
+.summary{
+    width:300px;
+    margin: 0 auto;
+    background-color: rgba(255,38,0,0.89);
+    text-align: center;
+    font-family: "Poppins";
+}
+.title{
+    background: white;
+    color:black;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px;
+    border-bottom:solid black 5px;
+    text-shadow: 1px 1px 1px;
+}
+.data-blocks{
+    font-size: 25px;
+    background: rgb(248,67,67);
+    padding:10px;
+    border-bottom: solid yellow 2px;
+}
+.data-block-title{
+    text-shadow: 1px 1px 1px black;
+}
+.data-block-value{
+    color:white;
+}
