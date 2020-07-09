@@ -2,47 +2,50 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<div class="pagebody">
+    <div class="summary">
+        <div class="title">World Report Summary</div>
+        <div class="data-blocks-group">
+            <div class="data-blocks">
+                <div class="data-block-title">New Confirmed</div>
+                <div class="data-block-value">{{data.NewConfirmed}}</div>
+            </div>
+            <div class="data-blocks">
+                <div class="data-block-title">New Deaths</div>
+                <div class="data-block-value">{{data.NewDeaths}}</div>
+            </div>
+            <div class="data-blocks">
+                <div class="data-block-title">New Recovered</div>
+                <div class="data-block-value">{{data.NewRecovered}}</div>
+            </div>
+            <div class="data-blocks">
+                <div class="data-block-title">Total Confirmed</div>
+                <div class="data-block-value">{{data.TotalConfirmed}}</div>
+            </div>
+            <div class="data-blocks">
+                <div class="data-block-title">Total Death</div>
+                <div class="data-block-value">{{data.TotalDeaths}}</div>
+            </div>
+            <div class="data-blocks">
+                <div class="data-block-title">Total Recovered</div>
+                <div class="data-block-value">{{data.TotalRecovered}}</div>
+            </div>
+        </div>
+        <div class="logo">
 
-
-<div class="summary">
-    <div class="title">World Report Summary</div>
-    <div class="data-blocks-group">
-        <div class="data-blocks">
-            <div class="data-block-title">New Confirmed</div>
-            <div class="data-block-value">{{data.NewConfirmed}}</div>
-        </div>
-        <div class="data-blocks">
-            <div class="data-block-title">New Deaths</div>
-            <div class="data-block-value">{{data.NewDeaths}}</div>
-        </div>
-        <div class="data-blocks">
-            <div class="data-block-title">New Recovered</div>
-            <div class="data-block-value">{{data.NewRecovered}}</div>
-        </div>
-        <div class="data-blocks">
-            <div class="data-block-title">Total Confirmed</div>
-            <div class="data-block-value">{{data.TotalConfirmed}}</div>
-        </div>
-        <div class="data-blocks">
-            <div class="data-block-title">Total Death</div>
-            <div class="data-block-value">{{data.TotalDeaths}}</div>
-        </div>
-        <div class="data-blocks">
-            <div class="data-block-title">Totla Recovered</div>
-            <div class="data-block-value">{{data.TotalRecovered}}</div>
+            Made with<img
+                src="https://images.ctfassets.net/zojzzdop0fzx/2niEOIroLnnZ5RaQn8CkO0/722eb41774188cdfb1060c525474073c/Angular_full_color_logo.svg__1_.png?w=500&q=50"
+                width="30px" height="30px">ngular
         </div>
     </div>
-    Made with<img
-        src="https://images.ctfassets.net/zojzzdop0fzx/2niEOIroLnnZ5RaQn8CkO0/722eb41774188cdfb1060c525474073c/Angular_full_color_logo.svg__1_.png?w=500&q=50"
-        width="30px" height="30px">ngular
-</div>
-
-<body style="background-color: darkslategrey;">
-    <div class="container">
+<div class="timedate">Last Updated:-{{time}} {{date}}</div>
+    <div class="container flexmain">
         <div *ngFor="let value of arrayvalue">
-            <div class="card mt-3 ml-1">
-                <img class="card-img-top" src="https://www.countryflags.io/{{value.CountryCode}}/flat/64.png"
-                    alt="Card image">
+            <div class="card mt-3 ml-1 flexbody">
+                <div class="imagebody">
+                    <img class="card-img-top imagesize"
+                        src="https://www.countryflags.io/{{value.CountryCode}}/flat/64.png" alt="Card image">
+                </div>
                 <div class="card-body text-center">
                     <h4 class="card-title text-center" style="font-family: 'Roboto Slab', serif;">{{value.Country}}
                     </h4>
@@ -61,6 +64,8 @@
                 </div>
             </div>
         </div>
-        <p class="text-center"style="color:white">Coded by <a class="text-center" href="https://github.com/CSElonewolf" style="text-decoration:none;color:white;font-family: 'Dancing Script', cursive;">CSElonewolf</a></p>
     </div>
-</body>
+    <p class="text-center" style="color:white">Coded by <a class="text-center" href="https://github.com/CSElonewolf"
+            style="text-decoration:none;color:white;font-family: 'Dancing Script', cursive;">CSElonewolf</a></p>
+
+</div>

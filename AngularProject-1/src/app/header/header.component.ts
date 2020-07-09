@@ -1,4 +1,4 @@
-import { Component,Input, OnInit} from '@angular/core';
+import { Component,Input,OnChanges,OnInit, ɵɵNgOnChangesFeature} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +8,17 @@ import { Component,Input, OnInit} from '@angular/core';
 export class HeaderComponent implements OnInit {
   @Input() data:any;
   @Input() arrayvalue:any;
-  ngOnInit(): void {
+  @Input() date:any;
+  @Input() time:any;
+  ngOnInit(){
+    console.log(this.date)
   }
-}
+  ngOnChanges(){
+        this.arrayvalue.sort((a,b)=>{
+          return b.TotalConfirmed - a.TotalConfirmed
+        })
+
+    }
+  }
+
 
