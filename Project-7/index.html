@@ -5,12 +5,15 @@
     <title>Reddit by Devkant</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="https://external-preview.redd.it/iDdntscPf-nfWKqzHRGFmhVxZm4hZgaKe5oyFws-yzA.png?auto=webp&s=38648ef0dc2c3fce76d5e1d8639234d8da0152b2">
+    <link rel="icon"
+        href="https://external-preview.redd.it/iDdntscPf-nfWKqzHRGFmhVxZm4hZgaKe5oyFws-yzA.png?auto=webp&s=38648ef0dc2c3fce76d5e1d8639234d8da0152b2">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat&family=Pangolin&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat&family=Pangolin&display=swap"
+        rel="stylesheet">
 </head>
 
 <body style="background-color: aqua;">
@@ -26,50 +29,49 @@
     <div class="container" id="container">
         <div class="card bg-warning mb-3 mt-3" id="card">
             <div class="card-body" id="search">
-                <form id="search-form">
-                    <div class="form-group">
-                        <h4>Search Reddit</h4>
-                        <input type="text" class="form-control" placeholder="Search Term..." id="search-input">
-                    </div>
-                    <div class="form-check-inline mb-3">
-                        Sort By:-
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="sortby" value="relevance" checked>
-                            Relevance
-                        </label>
-                    </div>
-                    <div class="form-check-inline">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="sortby" value="new">Latest
-                        </label>
-                    </div>
-                    <div class="form-check-inline">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="sortby" value="hot">Hot
-                        </label>
-                    </div>
-                    <div class="form-check-inline">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="sortby" value="top">Top
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <h5>Limit:</h5>
-                        <select class="form-control" name="limit" id="limit">
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="25" selected>25</option>
-                            <option value="50">50</option>
-                            <option value="100">100</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-success btn-block">Search</button>
-                </form>
+                <div class="form-group">
+                    <h4>Search Reddit</h4>
+                    <input type="text" class="form-control" placeholder="Search Term..." id="search-input">
+                </div>
+                <div class="form-check-inline mb-3">
+                    Sort By:-
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="sortby" value="relevance" checked>
+                        Relevance
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="sortby" value="new">Latest
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="sortby" value="hot">Hot
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="sortby" value="top">Top
+                    </label>
+                </div>
+                <div class="form-group">
+                    <h5>Limit:</h5>
+                    <select class="form-control" name="limit" id="limit">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="25" selected>25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <button id="submit" class="btn btn-success btn-block">Search</button>
             </div>
         </div>
         <div id="results" class="row"></div>
     </div>
-    <p class="text-center"style="color:dark">Coded by <a class="text-center" href="https://github.com/CSElonewolf" style="text-decoration:none;color:black;font-family: 'Dancing Script', cursive;">CSElonewolf</a></p>
+    <p class="text-center" style="color:dark">Coded by <a class="text-center" href="https://github.com/CSElonewolf"
+            style="text-decoration:none;color:black;font-family: 'Dancing Script', cursive;">CSElonewolf</a></p>
     <script src="index.js"></script>
 </body>
 

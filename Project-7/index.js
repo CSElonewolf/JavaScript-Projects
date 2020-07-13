@@ -1,11 +1,11 @@
 
-//grab the ids in the index.html
-let searchform = document.getElementById('search-form')
-let searchinput = document.getElementById('search-input')
-let limit = document.getElementById('limit');
 
 //add submit event listener to the form
-searchform.addEventListener('submit', e => {
+let submit = document.getElementById('submit');
+submit.addEventListener('click', e => {
+    //grab the ids in the index.html
+    let searchinput = document.getElementById('search-input')
+    let limit = document.getElementById('limit');
     const searchterm = searchinput.value;
     limit = limit.value;
     const sortby = document.querySelector('input[name="sortby"]:checked').value;
@@ -23,20 +23,20 @@ searchform.addEventListener('submit', e => {
             data.data.children.forEach(post => {
                 let image = post.data.preview ? post.data.preview.images[0].source.url : 'reddit.png';
                 html += `<div class="card col-lg-3 col-md-4 col-sm-12 mb-2 shadow p-4 mb-4 bg-white">
-        <img class="card-img-top" src="${image}" alt="Card image">
-        <div class="card-body">
-          <h4 class="card-title" style="font-family: 'Pangolin', cursive;">${post.data.title}</h4>
-          <p class="card-text" style="font-family: 'Montserrat', sans-serif;">${shorten(post.data.selftext, 100)}</p>
-          
-          <span class="badge badge-pill badge-primary">scores:${post.data.score}</span>
-        <span class="badge badge-pill badge-success">subscribers:${post.data.subreddit_subscribers}</span>
-        <span class="badge badge-pill badge-secondary">ups:${post.data.ups}</span><br>
-          <a href="${post.data.url}" target ="_blank"class="btn btn-primary mt-4">Read More</a>
-        </div>
-        </div>`
+                        <img class="card-img-top" src="${image}" alt="Card image">
+                        <div class="card-body">
+                        <h4 class="card-title" style="font-family: 'Pangolin', cursive;">${post.data.title}</h4>
+                        <p class="card-text" style="font-family: 'Montserrat', sans-serif;">${shorten(post.data.selftext, 100)}</p>
+                        
+                        <span class="badge badge-pill badge-primary">scores:${post.data.score}</span>
+                        <span class="badge badge-pill badge-success">subscribers:${post.data.subreddit_subscribers}</span>
+                        <span class="badge badge-pill badge-secondary">ups:${post.data.ups}</span><br>
+                        <a href="${post.data.url}" target ="_blank"class="btn btn-primary mt-4">Read More</a>
+                        </div>
+                        </div>`
             });
             document.getElementById('results').innerHTML = html
-            searchinput.value = '';
+
 
         });
     e.preventDefault();
