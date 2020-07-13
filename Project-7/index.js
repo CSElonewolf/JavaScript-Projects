@@ -21,7 +21,7 @@ searchform.addEventListener('submit', e => {
         .then(data => {
             let html = ''
             data.data.children.forEach(post => {
-                let image = post.data.preview ? post.data.preview.images[0].source.url : 'https://lh3.googleusercontent.com/proxy/jXF1EnIcWuxNL8hVHrgmnuAadZyD0MXwVadsva-R8py1xvysIXW2PD7CkmD7JA5e9yC4uGD-KIov2Ezz6vKL_ojdcBz37gxnYglT9RYGQL4xYc-6tS2KHd0Re7d8Kcqk';
+                let image = post.data.preview ? post.data.preview.images[0].source.url : 'reddit.png';
                 html += `<div class="card col-lg-3 col-md-4 col-sm-12 mb-2 shadow p-4 mb-4 bg-white">
         <img class="card-img-top" src="${image}" alt="Card image">
         <div class="card-body">
