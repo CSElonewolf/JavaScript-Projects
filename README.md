@@ -25,7 +25,7 @@
 | Project-6 :heart_eyes_cat:                                 | [View Demo](https://cselonewolf.github.io/JavaScript-Projects/Project-6/)|
 | Project-7 :heart_eyes_cat:                                 | [View Demo](https://redditsearchapp.netlify.app/)|
 | Project-8 :heart_eyes_cat:                                 | [View Demo](https://cselonewolf.github.io/JavaScript-Projects/Project-8/)|
-| Project-9 :heart_eyes_cat:                                 | [View Demo](https://postmanclone.web.app/)|
+| Project-9 :heart_eyes_cat:                                 | [View Demo](https://cselonewolf.github.io/JavaScript-Projects/Project-9/)|
 
 
 
