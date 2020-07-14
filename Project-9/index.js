@@ -10,6 +10,18 @@ setInterval(() => {
     }
 }, 500);
 
+//animation of the header text
+var i = 0;
+var txt = 'One Stop for GET & POST Request';
+typeWriter();
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("animetext").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, 80);
+  }
+}
+
 //let the value of customparamters be 
 let paramterindex = 0;
 
@@ -95,10 +107,26 @@ submit.addEventListener('click', () => {
     //grab all the ids from the DOM
     let url = document.getElementById('url').value;
     let requestType = document.querySelector("input[name='requestType']:checked").value;
-    // document.getElementById('responseJsonText').value = `Please wait! Your ${requestType} Request is on the way`;
-    document.getElementById('responseJsonText').innerText = `Please wait! Your ${requestType} Request is on the way`;
-
     let contentType = document.querySelector("input[name='contentType']:checked").value;
+    
+    let urlvalue = url;
+    urlvalue = urlvalue.toString();
+
+    //handling errors
+    if( url == '' && (requestType == 'GET' || requestType == 'POST')){
+        let errormsg = 'URL cannot be empty.';
+        showerror(errormsg);
+    } 
+
+    //to check whether URL is correct
+    else if(urlvalue.substring(0,4) != 'http'){
+        let errormsg = 'URL is incorrect';
+        showerror(errormsg);
+    }
+    else{
+    document.getElementById('responseJsonText').value = `Please wait! Your ${requestType} Request is on the way`;
+    // document.getElementById('responseJsonText').innerText = `Please wait! Your ${requestType} Request is on the way`;
+
 
 
     //SUPPOSE THE CUASTON PARASMS OPTION IS CHOSEN
@@ -127,8 +155,8 @@ submit.addEventListener('click', () => {
         })
         .then((response) => response.text())
         .then((recieveddata) => {
-            //  document.getElementById('responseJsonText').value = recieveddata;
-            document.getElementById('responseJsonText').innerText = recieveddata;
+             document.getElementById('responseJsonText').value = recieveddata;
+            // document.getElementById('responseJsonText').innerText = recieveddata;
             // Prism.highlightAll();
         });
     }
@@ -143,9 +171,21 @@ submit.addEventListener('click', () => {
         })
         .then((response) => response.text())
         .then((recieveddata) => {
-            // document.getElementById('responseJsonText').value = recieveddata;
-            document.getElementById('responseJsonText').innerText = recieveddata;
+            document.getElementById('responseJsonText').value = recieveddata;
+            // document.getElementById('responseJsonText').innerText = recieveddata;
             // Prism.highlightAll();
         })
     }
+}
 })
+
+//error msg displaying function
+ function showerror(errormsg){
+     let html = `<div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+                <strong>Alert!!</strong> ${errormsg}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>`;
+            document.getElementById('error').innerHTML = html;
+ }
