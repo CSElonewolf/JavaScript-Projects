@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>LyricsSearch App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon2.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat&family=Pangolin&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="bgimage">
+        <h1 id="heading">Lyrics Search</h1>
+        <div class="input-group mb-3" id="inputbar">
+            <input type="text" class="form-control" id="inputbox" placeholder="Enter artist/song name">
+            <div class="input-group-append">
+                <button class="btn material-icons" type="submit" id="searchbutton">
+                    music_note</button>
+            </div>
+        </div>
+    </div>
+    <!-- songs will be displayed here -->
+    <div class="container text-center mb-4" id="results">
+    </div>
+
+    <!-- next or prev buttons [This is not functional; right now due to CORS issue-->
+    <div id="more" class="mb-4">
+    </div>
+
+    <p class="text-center" style="color:dark">Coded by <a class="text-center" href="https://github.com/CSElonewolf"
+            style="text-decoration:none;color:black;font-family: 'Dancing Script', cursive;">CSElonewolf</a></p>
+
+</body>
+<script src="index.js"></script>
+
+</html>
