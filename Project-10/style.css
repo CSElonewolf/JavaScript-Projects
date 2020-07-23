@@ -1,0 +1,63 @@
+.bgimage{
+    background-image: url('https://source.unsplash.com/1600x900/?music,song');
+    height:300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.bgimage::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    background-color: rgba(0,0,0,0.2);
+}
+#inputbar{
+    position: absolute;
+    max-width:400px;
+    margin-top:40px;
+    padding:20px;
+}
+#heading{
+    color:white;
+    margin-bottom: 40px;
+    z-index: 200;
+    font-family: 'Permanent Marker', cursive;
+}
+#searchbutton{
+    color:white;
+    background-color: black;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 200;
+
+
+}
+#inputbox{
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    text-decoration: none;
+    z-index: 200;
+
+}
+#more{
+    display:flex;  
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.middle{
+    flex-basis: 15%;
+    margin-right:10px;
+    border-radius: 40px;
+}
+
+
